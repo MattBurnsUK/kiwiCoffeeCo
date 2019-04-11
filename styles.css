@@ -1,3 +1,7 @@
+html {
+    box-sizing: border-box;
+}
+
 .header {
     width: 100%;
     display: flex;
@@ -8,6 +12,7 @@
 .half-page-width {
     width: 50%;
     height: auto;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -18,6 +23,15 @@
 .buttons-container {
     display: flex;
     flex-wrap: nowrap;
+}
+
+h1 {
+    font-size: 5em;
+    padding: 20px;
+}
+
+p {
+    padding: 10px 10px 0px;
 }
 
 /* Set a style for all buttons */
@@ -66,11 +80,9 @@ nav a {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
-}
-
-.left {
-    color:white;
-    background-color: black;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
 }
 
 .auto-size {
@@ -78,13 +90,11 @@ nav a {
     max-height: 100%;
 }
 
-.right {
-    background-color: lightgray;
-    color: black;
-}
 
 .bg-black {
     background-color: black;
+    color: white;
+    box-sizing: border-box;
 }
 
 .button-link {
@@ -107,4 +117,10 @@ nav a {
 
 .heavy-padding {
     padding: 20%;
+}
+
+.bg-grey {
+    background: lightgray;
+    color: black;
+    box-sizing: border-box;
 }
