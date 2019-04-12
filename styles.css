@@ -10,7 +10,7 @@ html {
 }
 
 .half-page-width {
-    width: 50%;
+    width: 100%;
     height: auto;
     box-sizing: border-box;
 }
@@ -77,8 +77,9 @@ nav a {
 }
 
 .full-width {
+    width: 100%;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     box-sizing: border-box;
@@ -123,4 +124,48 @@ nav a {
     background: lightgray;
     color: black;
     box-sizing: border-box;
+}
+
+
+
+/* responsive stuff */
+
+@media screen and (min-width:400px) {
+    .full-width {
+        flex-wrap: nowrap;
+    }
+    .half-page-width {
+        width: 50%;
+    }
+}
+
+
+/* tabs for product details page */
+input {
+    display: none;
+}
+
+.tabbed {
+    display: none;
+    padding: 20px 0 0;
+    border-top: 1px solid #abc;
+}
+
+label {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 15px 25px;
+    text-align: center;
+    color: #abc
+    border: 1px solid transparent;
+}
+
+label:hover {
+    color: #3ab54b;
+    cursor: pointer;
+}
+
+
+#tab1:checked ~ #content1, #tab2:checked ~ #content2 {
+    display: block;
 }
