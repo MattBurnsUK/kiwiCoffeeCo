@@ -37,13 +37,20 @@
     <section class="tabbed" id="content2">
       <p>The fact file goes here.</p>
     </section>
-
-
-
-
-
-    Description
-    Fact File
+    <form id="addToCart">
+      <input id="200g" type="radio" name="size">
+      <label for="200g">200g</label>
+      <input id="500g" type="radio" name="size">
+      <label for="500g">500g</label>
+      <label for="grind">Please choose your grind type:</label>
+      <select name="grind" id="grind">
+        <option value="none" selected="selected">-- choose one --</option>
+        <option>Aeropress</option>
+        <option>Espresso</option>
+        <option>French Press</option>
+        <option>Pourover/Filter</option>
+      </select>
+    </form>
   </section>
 </body>
 </html>
