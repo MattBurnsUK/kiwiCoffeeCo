@@ -26,7 +26,7 @@ html {
 }
 
 h1 {
-    font-size: 5em;
+    font-size: 3em;
     padding: 20px;
 }
 
@@ -128,7 +128,7 @@ nav a {
 
 
 
-/* responsive stuff */
+/* responsive stuff - GLOABAL */
 
 @media screen and (min-width:400px) {
     .full-width {
@@ -136,6 +136,15 @@ nav a {
     }
     .half-page-width {
         width: 50%;
+    }
+    #order1 {
+        order: 1;
+    }
+    #addToCart {
+        order: 2;
+    }
+    #order3 {
+        order: 3;
     }
 }
 
@@ -165,7 +174,16 @@ label:hover {
     cursor: pointer;
 }
 
+input:checked + label {
+    color: #3ab54b;
+}
+
+/* add to cart form*/
 
 #tab1:checked ~ #content1, #tab2:checked ~ #content2 {
+    display: block;
+}
+
+#addToCart select, #grind {
     display: block;
 }
