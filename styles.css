@@ -128,14 +128,15 @@ nav a {
 
 
 
-/* responsive stuff - GLOABAL */
+/* responsive stuff  */
 
 @media screen and (min-width:400px) {
     .full-width {
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
     }
     .half-page-width {
         width: 50%;
+        padding: 20px;
     }
     #order1 {
         order: 1;
