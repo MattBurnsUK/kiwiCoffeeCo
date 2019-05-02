@@ -130,9 +130,9 @@ nav a {
 
 /* responsive stuff  */
 
-@media screen and (min-width:400px) {
+@media screen and (min-width: 600px) {
     .full-width {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
     .half-page-width {
         width: 50%;
@@ -146,6 +146,7 @@ nav a {
     }
     #order3 {
         order: 3;
+        background-color: aqua;
     }
 }
 
@@ -176,7 +177,10 @@ label:hover {
 }
 
 input:checked + label {
-    color: #3ab54b;
+    color: white;
+    background-color: #3ab54b;
+    -webkit-transition: background-color 1.2s;
+    transition: background-color 1.2s;
 }
 
 /* add to cart form*/
