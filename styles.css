@@ -76,12 +76,12 @@ nav a {
     color: white;
 }
 
-.full-width {
+.full-width, .full-width-flex-container {
     width: 100%;
     display: flex;
+    align-items: flex-start;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: center;
     box-sizing: border-box;
     padding: 20px;
 }
@@ -126,27 +126,26 @@ nav a {
     box-sizing: border-box;
 }
 
+.product-image, .add-to-cart, .product-description {
+    width: 100%;
+    box-sizing: border-box;
+}
 
-
-/* responsive stuff  */
+/* responsive stuff - product details page */
 
 @media screen and (min-width: 600px) {
-    .full-width {
-        flex-wrap: nowrap;
-    }
-    .half-page-width {
+    .product-image, .add-to-cart {
         width: 50%;
-        padding: 20px;
     }
-    #order1 {
-        order: 1;
+    .full-width {
+        width: 50%;
+        flex-wrap: wrap;
     }
-    #addToCart {
-        order: 2;
-    }
-    #order3 {
-        order: 3;
-        background-color: aqua;
+}
+
+@media screen and (min-width: 900px) {
+    .product-description {
+        width: 50%;
     }
 }
 
@@ -183,12 +182,65 @@ input:checked + label {
     transition: background-color 1.2s;
 }
 
-/* add to cart form*/
-
 #tab1:checked ~ #content1, #tab2:checked ~ #content2 {
     display: block;
 }
 
+/* add to cart form*/
+
 #addToCart select, #grind {
     display: block;
+}
+
+.grind-icons input {
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+}
+
+.grind-icons input:active + .icon-selector {
+    opacity: .9;
+    border: 1px solid #3ab54b;
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+            filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+
+.aeropress {
+    background-image: url(http://localhost/kiwicoffeeco2/aeropress-icon.png)
+}
+
+.moka {
+    background-image: url(http://localhost/kiwicoffeeco2/moka-icon.png)
+}
+
+.chemex {
+    background-image: url(http://localhost/kiwicoffeeco2/chemex-icon.png)
+}
+
+.drip {
+    background-image: url(http://localhost/kiwicoffeeco2/drip-icon.png)
+}
+
+.espresso {
+    background-image: url(http://localhost/kiwicoffeeco2/espresso-icon.png)
+}
+
+.icon-selector{
+    border-radius: 25px;
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:45px;
+    height:65px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+}
+.icon-selector:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+            filter: brightness(1.2) grayscale(.5) opacity(.9);
 }

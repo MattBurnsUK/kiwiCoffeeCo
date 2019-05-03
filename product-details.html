@@ -23,37 +23,44 @@
     <a href="#">Contact</a>
   </nav>
   <h1>Nicaragua Finca La Casa Coffee Beans</h1>
-    <section class="full-width">
-      <section class="" id="order1">
+    <section class="full-width-flex-container">
+      <section class="product-image" id="order1">
         <img class="auto-size" src="mexican-coffee.png">
       </section>
-      <section class="" id="order3">
-        <input id="tab1" type="radio" name="tabs" checked>
-        <label for="tab1">Description</label>
-        <input id="tab2" type="radio" name="tabs">
-        <label for="tab2">Fact File</label>
-        <section class="tabbed" id="content1">
-          <p>The description of the coffee goes here.</p>
+      <section class="full-width">
+        <form class="add-to-cart" id="addToCart">
+          <input id="200g" type="radio" name="size">
+          <label for="200g">200g</label>
+          <input id="500g" type="radio" name="size">
+          <label for="500g">500g</label>
+          <p>Please choose your grind type:</p>
+          <div class="grind-icons">
+            <input checked="checked" id="aeropress" type="radio" name="grind-size" value="aeropress" />
+            <label class="icon-selector aeropress" for="aeropress"></label>
+            <input id="moka" type="radio" name="grind-size" value="moka" />
+            <label class="icon-selector moka"for="moka"></label>
+            <input id="chemex" type="radio" name="grind-size" value="chemex" />
+            <label class="icon-selector chemex"for="chemex"></label>
+            <input id="drip" type="radio" name="grind-size" value="drip" />
+            <label class="icon-selector drip"for="drip"></label>
+            <input id="espresso" type="radio" name="grind-size" value="espresso" />
+            <label class="icon-selector espresso"for="espresso"></label>
+          </div>
+          <button type="button">Add To Cart</button>
+        </form>
+        <section class="product-description" id="order3">
+          <input id="tab1" type="radio" name="tabs" checked>
+          <label for="tab1">Description</label>
+          <input id="tab2" type="radio" name="tabs">
+          <label for="tab2">Fact File</label>
+          <section class="tabbed" id="content1">
+            <p>The description of the coffee goes here.</p>
+          </section>
+          <section class="tabbed" id="content2">
+            <p>The fact file goes here.</p>
+          </section>
         </section>
-        <section class="tabbed" id="content2">
-          <p>The fact file goes here.</p>
-        </section>
-      </section>
-      <form class="" id="addToCart">
-        <input id="200g" type="radio" name="size">
-        <label for="200g">200g</label>
-        <input id="500g" type="radio" name="size">
-        <label for="500g">500g</label>
-        <label for="grind">Please choose your grind type:</label>
-        <select name="grind" id="grind">
-          <option value="none" selected="selected">-- choose one --</option>
-          <option>Aeropress</option>
-          <option>Espresso</option>
-          <option>French Press</option>
-          <option>Pourover/Filter</option>
-        </select>
-        <button type="button">Add To Cart</button>
-      </form>
     </section>
+  </section>
 </body>
 </html>
