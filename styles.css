@@ -182,7 +182,7 @@ input:checked + label {
     transition: background-color 1.2s;
 }
 
-#tab1:checked ~ #content1, #tab2:checked ~ #content2 {
+#tab1:checked ~ #content1, #tab2:checked ~ #content2, #g200g:checked ~ #content1, #g500g:checked ~ #content2 {
     display: block;
 }
 
