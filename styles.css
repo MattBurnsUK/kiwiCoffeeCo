@@ -134,7 +134,7 @@ nav a {
 /* responsive stuff - product details page */
 
 @media screen and (min-width: 600px) {
-    .product-image, .add-to-cart {
+    .product-image {
         width: 50%;
     }
     .full-width {
@@ -159,6 +159,10 @@ input {
     display: none;
     padding: 20px 0 0;
     border-top: 1px solid #abc;
+}
+
+#g200g:checked ~ #content1, #g500g:checked ~ #content2 {
+    margin-top: 0px;
 }
 
 label {
