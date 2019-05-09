@@ -26,6 +26,7 @@ html {
 }
 
 h1 {
+    display: inline-block;
     font-size: 3em;
     padding: 20px;
 }
@@ -34,12 +35,10 @@ p {
     padding: 10px 10px 0px;
 }
 
-h1 {
-    display: inline-block;
-}
-
 h2 > ul {
     list-style-type: none;
+    text-align: center;
+    margin-top: -50px;
 }
 
 h2 > ul > li {
@@ -51,15 +50,13 @@ li + li::before {
     content: "~ "
 }
 
-.title-info {
-    background-image: url(nicaragua-finca-la-casa.gif);
-    background-repeat: no-repeat;
-    background-size: 100px;
-}
-
 .thumbnail {
     width: 100px;
     display: inline-block;
+}
+
+.title-info {
+    align-items: baseline;
 }
 
 /* Set a style for all buttons */
