@@ -22,9 +22,11 @@
     <a href="#">Coffee</a>
     <a href="#">Contact</a>
   </nav>
-  <h1>Nicaragua Finca La Casa Coffee Beans</h1>
-  <h2><ul><li>Brown Sugar</li><li>Dark Chocolate</li><li>Spiced Apple</li></ul></h2>
-  <img src="nicaragua-finca-la-casa.gif">
+  <section class="title-info">
+    <img class="thumbnail" src="nicaragua-finca-la-casa.gif">
+    <h1>Nicaragua Finca La Casa Coffee Beans</h1>
+    <h2><ul><li>Brown Sugar</li><li>Dark Chocolate</li><li>Spiced Apple</li></ul></h2>
+  </section>
     <section class="full-width-flex-container">
       <section class="product-image" id="order1">
         <img class="auto-size" src="mexican-coffee.png">
@@ -36,27 +38,21 @@
             <label for="g200g">200g</label>
             <input id="g500g" type="radio" name="size">
             <label for="g500g">500g</label>
-              <section class="tabbed" id="content1">
-                <p>$9.99</p>
-              </section>
-              <section class="tabbed" id="content2">
-                <p>$14.99</p>
-              </section>
+            <p>Please choose your grind type:</p>
+            <div class="grind-icons">
+              <input checked="checked" id="aeropress" type="radio" name="grind-size" value="aeropress" />
+              <label class="icon-selector aeropress" for="aeropress"></label>
+              <input id="moka" type="radio" name="grind-size" value="moka" />
+              <label class="icon-selector moka"for="moka"></label>
+              <input id="chemex" type="radio" name="grind-size" value="chemex" />
+              <label class="icon-selector chemex"for="chemex"></label>
+              <input id="drip" type="radio" name="grind-size" value="drip" />
+              <label class="icon-selector drip"for="drip"></label>
+              <input id="espresso" type="radio" name="grind-size" value="espresso" />
+              <label class="icon-selector espresso"for="espresso"></label>
+            </div>
+            <button class="cart-button" type="button">Add To Cart</button>
           </section>
-          <p>Please choose your grind type:</p>
-          <div class="grind-icons">
-            <input checked="checked" id="aeropress" type="radio" name="grind-size" value="aeropress" />
-            <label class="icon-selector aeropress" for="aeropress"></label>
-            <input id="moka" type="radio" name="grind-size" value="moka" />
-            <label class="icon-selector moka"for="moka"></label>
-            <input id="chemex" type="radio" name="grind-size" value="chemex" />
-            <label class="icon-selector chemex"for="chemex"></label>
-            <input id="drip" type="radio" name="grind-size" value="drip" />
-            <label class="icon-selector drip"for="drip"></label>
-            <input id="espresso" type="radio" name="grind-size" value="espresso" />
-            <label class="icon-selector espresso"for="espresso"></label>
-          </div>
-          <button type="button">Add To Cart</button>
         </form>
         <section class="product-description" id="order3">
           <input id="tab1" type="radio" name="tabs" checked>
@@ -71,6 +67,9 @@
           </section>
         </section>
     </section>
+  </section>
+  <section class="footer">
+    Copywrite Kiwi Coffee Co. All rights reserved.
   </section>
 </body>
 </html>

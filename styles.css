@@ -34,6 +34,34 @@ p {
     padding: 10px 10px 0px;
 }
 
+h1 {
+    display: inline-block;
+}
+
+h2 > ul {
+    list-style-type: none;
+}
+
+h2 > ul > li {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+li + li::before {
+    content: "~ "
+}
+
+.title-info {
+    background-image: url(nicaragua-finca-la-casa.gif);
+    background-repeat: no-repeat;
+    background-size: 100px;
+}
+
+.thumbnail {
+    width: 100px;
+    display: inline-block;
+}
+
 /* Set a style for all buttons */
 button {
     background-color: #4CAF50;
@@ -131,6 +159,26 @@ nav a {
     box-sizing: border-box;
 }
 
+.add-to-cart {
+    box-shadow: -2px 2px 6px #888888;
+}
+
+.price > p {
+    text-align: center;
+}
+
+.price > label {
+    margin: 0px;
+    width: 38%;
+    border: 0px;
+}
+
+.footer {
+    height: 200px;
+    background-color: grey;
+    color: black;
+}
+
 /* responsive stuff - product details page */
 
 @media screen and (min-width: 600px) {
@@ -140,6 +188,10 @@ nav a {
     .full-width {
         width: 50%;
         flex-wrap: wrap;
+    }
+    .add-to-cart {
+        position: sticky;
+        top: 0;
     }
 }
 
@@ -188,6 +240,14 @@ input:checked + label {
 
 #tab1:checked ~ #content1, #tab2:checked ~ #content2, #g200g:checked ~ #content1, #g500g:checked ~ #content2 {
     display: block;
+}
+
+#g200g:checked ~ .cart-button::after {
+    content: " - $9.99";
+}
+
+#g500g:checked ~ .cart-button::after {
+    content: " - $14.99";
 }
 
 /* add to cart form*/
