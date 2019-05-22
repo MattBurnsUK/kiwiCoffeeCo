@@ -108,7 +108,7 @@ nav a {
     flex-wrap: wrap;
     justify-content: space-evenly;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 20px 20px 0px 20px;
 }
 
 .auto-size {
@@ -160,6 +160,11 @@ nav a {
     box-shadow: -2px 2px 6px #888888;
 }
 
+.half-width-image {
+    width: 50%;
+    padding-left: 25%;
+}
+
 .price > p {
     text-align: center;
 }
@@ -180,15 +185,16 @@ nav a {
 
 @media screen and (min-width: 600px) {
     .product-image {
-        width: 50%;
+        width: 35%;
     }
     .full-width {
         width: 50%;
         flex-wrap: wrap;
     }
-    .add-to-cart {
-        position: sticky;
-        top: 0;
+
+    .cart-container {
+        width: 65%;
+        padding-top:0px;
     }
 }
 
@@ -249,12 +255,23 @@ input:checked + label {
 
 /* add to cart form*/
 
+.cart-button {
+    width:98%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
 #addToCart select, #grind {
     display: block;
 }
 
+.grind-icons {
+    margin:5%;
+}
+
 .grind-icons input {
-    margin:0;padding:0;
+    margin:0px;
+    padding:0;
     -webkit-appearance:none;
        -moz-appearance:none;
             appearance:none;
@@ -267,6 +284,46 @@ input:checked + label {
        -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
             filter: brightness(1.2) grayscale(.5) opacity(.9);
 }
+
+.reviews {
+    display: flex;
+    width: 100%;
+    background-color:rgba(199, 199, 199, 0.2);
+    justify-content: center;
+}
+
+.fa-star {
+    color: #3ab54b;
+}
+
+.single-review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    padding: 1.5%;
+}
+
+.review-title {
+    font-weight: 700;
+}
+
+.review-quote p{
+    position: relative;
+    font-family: 'Sanchez', serif;
+    font-size: 1em;
+    line-height: 1em;
+    font-style: italic;
+}
+.review-quote p:before {
+        content: "\201C";
+        position: absolute;
+        top: 0.25em;
+        left: -0.15em;
+        color: rgba(58, 181, 75, 0.3);
+        font-size: 6em;
+        z-index: 1;
+     }
 
 .aeropress {
     background-image: url(http://localhost/kiwicoffeeco2/aeropress-icon.png)
