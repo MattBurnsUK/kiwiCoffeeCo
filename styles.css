@@ -55,6 +55,61 @@ li + li::before {
     display: inline-block;
 }
 
+.thumbnail--large {
+    width: 30%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: [col1-start] 20% [col1-end col2-start] 10% [col2-end col3-start] 40% [col3-end col4-start] 10% [col4-end col5-start] 20% [col5-end];
+    grid-template-rows: [row1-start] auto [row1-end row2-start] auto [row2-end row3-start] auto [row3-end];
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-items: center;
+    align-items: center;
+    justify-content: stretch;
+}
+
+.left-image-1 {
+    grid-column-start: col1-start;
+    grid-column-end: col1-end;
+    grid-row-start: row1-start;
+    grid-row-end: row1-end;
+}
+
+.right-image-1 {
+    
+}
+
+.left-image-2 {
+
+}
+
+.farm-info-1 {
+    grid-column-start: col2-start;
+    grid-column-end: col3-end;
+    grid-row-start: row1-start;
+    grid-row-end: row1-end;
+}
+
+.farm-info-2 {
+
+}
+
+.farm-info-3 {
+
+}
+
+
+
+.left-rotate {
+
+}
+
+.right-rotate {
+
+}
+
 .title-info {
     align-items: baseline;
 }
@@ -114,15 +169,27 @@ nav a {
 .desktop-only {
     list-style-type: none;
     text-align: center;
-    display: inline-block;
+    display: none;
 }
 
-@media screen and (max-width: 899px;){
+@media screen and (min-width: 600px;){
     .desktop-only {
-        display: none;
+        display: inline-block;
     }
 }
 
+.fixed-full-width {
+    width: 100%;
+}
+
+.fixed-full-width > ul {
+    display: flex;
+}
+
+.fixed-full-width > ul > li {
+    display: inline-block;
+    flex-grow: 1;
+}
 
 .auto-size {
     max-width: 100%;
