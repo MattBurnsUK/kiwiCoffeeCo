@@ -55,6 +55,14 @@ li + li::before {
     display: inline-block;
 }
 
+.caps-center {
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+}
+
+/* farm info grid on product details page */
+
 .thumbnail--large {
     width: 30%;
 }
@@ -78,14 +86,21 @@ li + li::before {
 }
 
 .right-image-1 {
-    
+    grid-column-start: col5-start;
+    grid-column-end: col5-end;
+    grid-row-start: row2-start;
+    grid-row-end: row2-end;
 }
 
 .left-image-2 {
-
+    grid-column-start: col1-start;
+    grid-column-end: col1-end;
+    grid-row-start: row3-start;
+    grid-row-end: row3-end;
 }
 
 .farm-info-1 {
+    display: flex;
     grid-column-start: col2-start;
     grid-column-end: col3-end;
     grid-row-start: row1-start;
@@ -93,11 +108,17 @@ li + li::before {
 }
 
 .farm-info-2 {
-
+    grid-column-start: col3-start;
+    grid-column-end: col4-end;
+    grid-row-start: row2-start;
+    grid-row-end: row2-end;
 }
 
 .farm-info-3 {
-
+    grid-column-start: col2-start;
+    grid-column-end: col3-end;
+    grid-row-start: row3-start;
+    grid-row-end: row3-end;
 }
 
 
