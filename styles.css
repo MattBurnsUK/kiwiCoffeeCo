@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 .header {
@@ -7,6 +8,10 @@ html {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+}
+
+.bold {
+    font-weight: 700;
 }
 
 .half-page-width {
@@ -25,10 +30,18 @@ html {
     flex-wrap: nowrap;
 }
 
+h1, h2, h3 {
+    font-family: 'Fjalla One', sans-serif;
+}
+
 h1 {
     display: inline-block;
     font-size: 3em;
     padding: 20px;
+}
+
+h2 {
+    font-size: xx-large;
 }
 
 p {
@@ -46,8 +59,14 @@ h2 > ul > li {
     padding-right: 10px;
 }
 
-li + li::before {
+h2 > ul > li + li::before {
     content: "~ "
+}
+
+li {
+    list-style-type: none;
+    list-style-image: url(/kiwicoffeeco2/coffee-bean.jpg);
+    margin-bottom: 10px;
 }
 
 .thumbnail {
@@ -64,71 +83,102 @@ li + li::before {
 /* farm info grid on product details page */
 
 .thumbnail--large {
-    width: 30%;
+    width: 90%;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: [col1-start] 20% [col1-end col2-start] 10% [col2-end col3-start] 40% [col3-end col4-start] 10% [col4-end col5-start] 20% [col5-end];
-    grid-template-rows: [row1-start] auto [row1-end row2-start] auto [row2-end row3-start] auto [row3-end];
+    grid-template-rows: [row1-start] auto [row1-end row2-start] auto [row2-end row3-start] auto [row3-end row4-start] auto [row4-end row5-start] auto [row5-end row6-start] auto [row6-end];
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     justify-items: center;
     align-items: center;
     justify-content: stretch;
+    margin-bottom: 20px;
 }
 
 .left-image-1 {
     grid-column-start: col1-start;
     grid-column-end: col1-end;
     grid-row-start: row1-start;
-    grid-row-end: row1-end;
+    grid-row-end: row2-end;
 }
 
 .right-image-1 {
     grid-column-start: col5-start;
     grid-column-end: col5-end;
-    grid-row-start: row2-start;
-    grid-row-end: row2-end;
+    grid-row-start: row3-start;
+    grid-row-end: row4-end;
 }
 
 .left-image-2 {
     grid-column-start: col1-start;
     grid-column-end: col1-end;
-    grid-row-start: row3-start;
-    grid-row-end: row3-end;
+    grid-row-start: row5-start;
+    grid-row-end: row6-end;
 }
 
 .farm-info-1 {
     display: flex;
     grid-column-start: col2-start;
     grid-column-end: col3-end;
-    grid-row-start: row1-start;
-    grid-row-end: row1-end;
+    grid-row-start: row2-start;
+    grid-row-end: row2-end;
 }
 
 .farm-info-2 {
     grid-column-start: col3-start;
     grid-column-end: col4-end;
-    grid-row-start: row2-start;
-    grid-row-end: row2-end;
+    grid-row-start: row4-start;
+    grid-row-end: row4-end;
 }
 
 .farm-info-3 {
     grid-column-start: col2-start;
     grid-column-end: col3-end;
+    grid-row-start: row6-start;
+    grid-row-end: row6-end;
+}
+
+.farm-info-headings {
+    text-transform: uppercase;
+    font-size: x-large;
+    margin: 0;
+    justify-self: start;
+}
+
+.farm-info-heading-1 {
+    grid-column-start: col2-start;
+    grid-column-end: col3-end;
+    grid-row-start: row1-start;
+    grid-row-end: row1-end;
+}
+
+.farm-info-heading-2 {
+    grid-column-start: col3-start;
+    grid-column-end: col4-end;
     grid-row-start: row3-start;
     grid-row-end: row3-end;
 }
 
-
+.farm-info-heading-3 {
+    grid-column-start: col2-start;
+    grid-column-end: col3-end;
+    grid-row-start: row5-start;
+    grid-row-end: row5-end;
+}
 
 .left-rotate {
-
+    -ms-transform: rotate(-15deg); /* IE 9 */
+    -webkit-transform: rotate(-15deg); /* Safari 3-8 */
+    transform: rotate(-15deg);
 }
 
 .right-rotate {
-
+    -ms-transform: rotate(15deg); /* IE 9 */
+    -webkit-transform: rotate(15deg); /* Safari 3-8 */
+    transform: rotate(15deg);
 }
 
 .title-info {
@@ -256,6 +306,10 @@ nav a {
     box-sizing: border-box;
 }
 
+.product-description {
+    margin-top: 10px;
+}
+
 .add-to-cart {
     box-shadow: -2px 2px 6px #888888;
 }
@@ -295,12 +349,6 @@ nav a {
     .cart-container {
         width: 65%;
         padding-top:0px;
-    }
-}
-
-@media screen and (min-width: 900px) {
-    .product-description {
-        width: 50%;
     }
 }
 
