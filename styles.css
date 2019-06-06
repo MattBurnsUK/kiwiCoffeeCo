@@ -80,6 +80,59 @@ li {
     text-align: center;
 }
 
+/* GLOBAL - the footer */
+
+.footer {
+    display: grid;
+    height: 200px;
+    background-color: #5B5959;
+    color: white;
+    grid-template-columns: [col1-start] 30% [col1-end col2-start] 30% [col2-end col3-start] 30% [col3-end];
+    grid-template-rows: [row1-start] auto [row1-end];
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-items: start;
+    align-items: start;
+    text-decoration: none;
+}
+
+.footer li {
+    list-style-type: none;
+    list-style-image: unset;
+}
+
+li a {
+    text-decoration: none;
+}
+
+.footer-1 {
+    grid-column-start: [col1-start];
+    grid-column-end: [col1-end];
+    grid-row-start: [row1-start];
+    grid-row-end: [row1-end];
+}
+
+.footer-2 {
+    grid-column-start: [col2-start];
+    grid-column-end: [col2-end];
+    grid-row-start: [row1-start];
+    grid-row-end: [row1-end];
+}
+
+.footer-3 {
+    grid-column-start: [col3-start];
+    grid-column-end: [col3-end];
+    grid-row-start: [row1-start];
+    grid-row-end: [row1-end];
+}
+
+.footer-header {
+    border-bottom: 2px solid green;
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
 /* farm info grid on product details page */
 
 .thumbnail--large {
@@ -329,11 +382,6 @@ nav a {
     border: 0px;
 }
 
-.footer {
-    height: 200px;
-    background-color: grey;
-    color: black;
-}
 
 /* responsive stuff - product details page */
 
