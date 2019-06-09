@@ -21,13 +21,15 @@ html {
 }
 
 .logo {
-    max-height: 200px;
+    max-height: 130px;
     width: auto;
 }
 
 .buttons-container {
     display: flex;
     flex-wrap: nowrap;
+    flex-direction: column;
+    width: 25%;
 }
 
 h1, h2, h3 {
@@ -36,12 +38,12 @@ h1, h2, h3 {
 
 h1 {
     display: inline-block;
-    font-size: 3em;
+    font-size: 2em;
     padding: 20px;
 }
 
 h2 {
-    font-size: xx-large;
+    font-size: 1em;
 }
 
 p {
@@ -72,6 +74,7 @@ li {
 .thumbnail {
     width: 100px;
     display: inline-block;
+    padding: 20px;
 }
 
 .caps-center {
@@ -141,14 +144,12 @@ li a {
 
 .grid-container {
     display: grid;
-    grid-template-columns: [col1-start] 20% [col1-end col2-start] 10% [col2-end col3-start] 40% [col3-end col4-start] 10% [col4-end col5-start] 20% [col5-end];
+    grid-template-columns: [col1-start] 30% [col1-end col2-start] 5% [col2-end col3-start] 30% [col3-end col4-start] 5% [col4-end col5-start] 30% [col5-end];
     grid-template-rows: [row1-start] auto [row1-end row2-start] auto [row2-end row3-start] auto [row3-end row4-start] auto [row4-end row5-start] auto [row5-end row6-start] auto [row6-end];
-    grid-column-gap: 10px;
     grid-row-gap: 10px;
     justify-items: center;
     align-items: center;
     justify-content: stretch;
-    margin-bottom: 20px;
 }
 
 .left-image-1 {
@@ -236,6 +237,7 @@ li a {
 
 .title-info {
     align-items: baseline;
+    padding: 20px;
 }
 
 /* Set a style for all buttons */
@@ -253,6 +255,11 @@ button {
 
 button:hover {
   opacity:1;
+}
+
+/* specific buttons */
+.account-button {
+    padding-right: 5px;
 }
 
 /* Nav menu */
@@ -294,9 +301,24 @@ nav a {
     list-style-type: none;
     text-align: center;
     display: none;
+    color: #5B5959;
 }
 
-@media screen and (min-width: 600px;){
+.desktop-only > ul {
+    border-bottom: 1px solid #5B5959;
+}
+
+.desktop-only > ul > li + li {
+    border-right: 1px solid #5B5959;
+    border-left: 1px solid #5B5959;
+}
+
+.desktop-only > ul > li:last-of-type {
+    border-right: none;
+    border-left: none;
+}
+
+@media screen and (min-width: 600px){
     .desktop-only {
         display: inline-block;
     }
@@ -463,6 +485,9 @@ input:checked + label {
 
 .grind-icons {
     margin:5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .grind-icons input {
@@ -522,36 +547,48 @@ input:checked + label {
      }
 
 .aeropress {
-    background-image: url(http://localhost/kiwicoffeeco2/aeropress-icon.png)
+    background-image: url(http://localhost/kiwicoffeeco2/aeropress-icon.png);
+}
+.aeropress:hover {
+    background-image: none;
+    background-color: #3ab54b;
+    content: "Aeropress";
 }
 
 .moka {
-    background-image: url(http://localhost/kiwicoffeeco2/moka-icon.png)
+    background-image: url(http://localhost/kiwicoffeeco2/moka-icon.png);
+}
+.moka:hover {
+    background-image: none;
+    background-color: #3ab54b;
+    content: "Moka";
 }
 
 .chemex {
-    background-image: url(http://localhost/kiwicoffeeco2/chemex-icon.png)
+    background-image: url(http://localhost/kiwicoffeeco2/chemex-icon.png);
 }
 
 .drip {
-    background-image: url(http://localhost/kiwicoffeeco2/drip-icon.png)
+    background-image: url(http://localhost/kiwicoffeeco2/drip-icon.png);
+    background-size: 100%;
 }
 
 .espresso {
-    background-image: url(http://localhost/kiwicoffeeco2/espresso-icon.png)
+    background-image: url(http://localhost/kiwicoffeeco2/espresso-icon.png);
 }
 
 .icon-selector{
-    border-radius: 25px;
     cursor:pointer;
     background-size:contain;
     background-repeat:no-repeat;
     display:inline-block;
-    width:45px;
-    height:65px;
+    width:75px;
+    height:75px;
     -webkit-transition: all 100ms ease-in;
        -moz-transition: all 100ms ease-in;
             transition: all 100ms ease-in;
+    padding: 0px;
+
 }
 .icon-selector:hover{
     -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
