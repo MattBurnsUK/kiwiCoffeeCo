@@ -8,6 +8,13 @@
     <link href="https://fonts.googleapis.com/css?family=B612+Mono&display=swap" rel="stylesheet">
 </head>
     <body>
+        <section class="desktop-only fixed-full-width">
+            <ul>
+              <li>Free NZ Delivery</li>
+              <li>100% Secure Checkout</li>
+              <li>Same day shipping!</li>
+            </ul>
+          </section>
       <section class="header">
         <section class="half-page-width"> 
             <img class="logo" src="new kiwi coffee logo.jpg" alt="kiwi coffee co logo">
@@ -24,50 +31,64 @@
       <a href="#">Contact</a>
     </nav>
     <section class="full-width-flex-container bg-black">
-      <section class="half-page-width bg-black">
-        <h1>Goodbye, crap coffee...</h1>
+      <section class="half-page-width bg-black flex-container flex-columns">
+        <h1 class="bg-green no-padding">Goodbye, crap coffee...</h1>
         <p>Hello, hand selected, ethically sourced, peak-fresh coffee beans.</p>
         <p>Our beans are roasted fresh to order to ensure they arrive to you at their maximum freshness.</p>
-        <a class="button-link" href="#">The Beans</a>
+        <a class="button-link button-link--small" href="#">The Beans</a>
       </section>
       <section class="half-page-width bg-black">
         <img class="auto-size" src="pourover-coffee.jpg" alt="pour over coffee">
       </section>
       <section class="full-width--always bg-grey">
-        <p>I'm looking for coffee from REGION with flavour notes of NOTES</p>
+        <p>I'm looking for coffee from 
+          <select class="rounded bg-grey">
+            <option>Central America</option>
+            <option>Asia</option>
+            <option>Africa</option>
+          </select>
+          with flavour notes of 
+          <select class="rounded bg-grey">
+            <option>Chocolate</option>
+            <option>Citrus</option>
+            <option>Floral</option>
+            <option>Nuts</option>
+          </select>
+        </p>
+        <a class="button-link button-link--green" href="#">Search</a>
       </section>
     </section>
     <h2>New Coffees</h2>
     <section class="full-width--always">
-      <article class="one-fifth">
+      <article class="one-fifth bg-white">
         <h4>Finca La Casa</h4>
         <section class="thumbnail-container">
           <img class="thumbnail auto-size" src="mexican-coffee.png">
         </section>
         <p>Chocolate, Apple, Stone Fruit</p>
       </article>
-      <article class="one-fifth">
+      <article class="one-fifth bg-white">
           <h4>Atitlan GH1</h4>
           <section class="thumbnail-container">
             <img class="thumbnail auto-size" src="mexican-coffee.png">
           </section>
           <p>Citrus, Blueberry, Orange</p>
       </article>
-      <article class="one-fifth">
+      <article class="one-fifth bg-white">
           <h4>Blue Mountain</h4>
           <section class="thumbnail-container">
             <img class="thumbnail auto-size" src="mexican-coffee.png">
           </section>
           <p>Floral, Berry, Smooth</p>
       </article>
-      <article class="one-fifth">
+      <article class="one-fifth bg-white">
           <h4>Brazilian Blend</h4>
           <section class="thumbnail-container">
             <img class="thumbnail auto-size" src="mexican-coffee.png">
           </section>
           <p>Hazlenut, Earthy, Caramel</p>
       </article>
-      <article class="one-fifth">
+      <article class="one-fifth bg-white">
           <h4>Guatamalan Gesha</h4>
           <section class="thumbnail-container">
             <img class="thumbnail auto-size" src="mexican-coffee.png">
