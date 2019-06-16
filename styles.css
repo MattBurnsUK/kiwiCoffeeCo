@@ -8,7 +8,7 @@ html {
 
 body {
     margin: 0;
-    padding 0;
+    padding: 0;
 }
 
 .header {
@@ -391,6 +391,8 @@ nav a {
 
 .flex-columns {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .desktop-only {
