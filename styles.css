@@ -52,6 +52,7 @@ h1 {
     display: inline-block;
     font-size: 2em;
     padding: 20px;
+    text-align: center;
 }
 
 h2 {
@@ -393,6 +394,8 @@ nav a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .desktop-only {
@@ -442,9 +445,11 @@ nav a {
 }
 
 .bg-black {
-    background-color: black;
+    background-image: linear-gradient(to right, #0A2E36 , black);
+   /* background-color: #0A2E36; */
     color: white;
     box-sizing: border-box;
+    align-self: stretch;
 }
 
 .bg-green {
@@ -453,6 +458,7 @@ nav a {
 
 .bg-white {
     background-color: white;
+    color: black;
 }
 
 .rounded {
@@ -465,13 +471,15 @@ nav a {
 
 .button-link {
     font-family: 'B612 Mono', monospace;
-    color: rgb(255, 136, 0);
+    color: #ED7D3A;
+   /* color: rgb(255, 136, 0); */
     padding: 14px 20px;
     margin: 8px 0;
     border: 3px solid rgb(255, 136, 0);
     cursor: pointer;
     width: 100%;
-    opacity: 0.9;
+    opacity: 1;
+    text-align: center;
 }
 
 .button-link--small {
@@ -529,6 +537,22 @@ nav a {
     box-shadow: -2px 2px 6px #888888;
 }
 
+@media screen and (max-width: 425px) {
+    .add-to-cart {
+        box-shadow: none;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .price > label {
+        width: 30%;
+    }
+
+    .flav-titles {
+        display: none;
+    }
+}
+
 .flavour-guide {
     background-color: white;
 }
@@ -544,7 +568,7 @@ nav a {
 
 .price > label {
     margin: 0px;
-    width: 38%;
+    width: 30%;
     border: 0px;
 }
 
