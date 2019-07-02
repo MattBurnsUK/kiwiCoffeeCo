@@ -120,7 +120,6 @@ li {
 
 .thumbnail {
     width: 100px;
-    display: none;
     padding: 20px;
 }
 
@@ -204,6 +203,12 @@ li a {
     align-items: center;
     justify-content: stretch;
     padding-top: 50px;
+}
+
+.grid-container--products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1rem;
 }
 
 .left-image-1 {
@@ -317,7 +322,7 @@ button:hover {
 }
 
 /* Nav menu */
-nav {
+nav label {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -326,8 +331,9 @@ nav {
     background-color: #3ab54b;
     text-align: center;
     height: auto;
-    font-size: 1.4em;
+    font-size: 1em;
     text-transform: uppercase;
+    overflow: hidden;
 }
 
 nav a {
@@ -340,6 +346,52 @@ nav a {
     background-color: #3ab54b;
     text-decoration: none;
     color: white;
+}
+
+.hamburger {
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+@media screen and (max-width: 420px ) {
+    nav label {
+        flex-direction: column;
+        position: relative;
+    }
+    #menu-checkbox {
+        position: absolute;
+        height: 40px;
+        width: 100%;
+        display: block;
+        top: 0px;
+        cursor: pointer;
+        opacity: 0;
+    }
+    .hamburger {
+        display: block;
+        padding: 20px;
+    }
+    .text-nav {
+        display: block;
+    }
+    nav a {
+        display: block;
+    }
+    nav a {
+        display:none;
+        height: 0px;
+    }
+    nav input:checked ~ a {
+        display: block;
+        height: 30px;
+        width: 100%;
+        z-index: 5;
+        -webkit-transition: all 100ms ease-in;
+        -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    }
 }
 
 .full-width, .full-width-flex-container {
@@ -394,8 +446,10 @@ nav a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    /*
+    padding-bottom: 30px;
+    padding-top: 30px;
+    */
 }
 
 .desktop-only {
@@ -445,8 +499,14 @@ nav a {
 }
 
 .bg-black {
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+    align-self: stretch;
+}
+
+.bg-grad {
     background-image: linear-gradient(to right, #0A2E36 , black);
-   /* background-color: #0A2E36; */
     color: white;
     box-sizing: border-box;
     align-self: stretch;
@@ -467,6 +527,11 @@ nav a {
    border-radius: 20px;
    padding: 10px;
    margin: 5px;
+}
+
+.no-margin {
+    margin: none;
+    padding: none;
 }
 
 .button-link {
@@ -503,6 +568,17 @@ nav a {
 }
 
 .one-fifth:hover {
+    background-color: #3ab54b;
+    cursor: pointer;
+}
+
+.product {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #3ab54b;
+}
+
+.product:hover {
     background-color: #3ab54b;
     cursor: pointer;
 }
