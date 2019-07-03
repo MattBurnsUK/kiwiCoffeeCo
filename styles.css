@@ -206,6 +206,7 @@ li a {
 }
 
 .grid-container--products {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 1rem;
@@ -422,6 +423,10 @@ nav a {
     padding: 0;
 }
 
+.no-styles {
+    text-decoration: none;
+}
+
 .wrapper {
     width: 100%;
     background-color: white;
@@ -576,11 +581,32 @@ nav a {
     padding: 10px;
     margin: 10px;
     border: 1px solid #3ab54b;
+    -webkit-transition: all 1.2s;
+    transition: all 1.2s;
 }
 
 .product:hover {
     background-color: #3ab54b;
+    color: white;
     cursor: pointer;
+}
+
+.hover-cover {
+    display: none;
+    position: absolute;
+    top: 147px;
+    color: black;
+    font-size: x-large;
+    border: solid white 2px;
+    padding: 10px;
+}
+
+.product:hover > .hover-cover {
+    display: block;
+    color: white;
+}
+.product:hover > .thumbnail-container {
+    opacity: 0;
 }
 
 .heavy-padding {
