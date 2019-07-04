@@ -237,13 +237,6 @@ li a {
         padding-top: 50px;
     }
 
-    .grid-container--products {
-        position: relative;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        grid-gap: 1rem;
-    }
-
     .left-image-1 {
         grid-column-start: col1-start;
         grid-column-end: col1-end;
@@ -328,6 +321,41 @@ li a {
     .farm-info-2 {
         grid-column-start: col1-start;
     }
+}
+
+/* Category pages and products viewer */
+.grid-container--products {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1rem;
+}
+
+@media screen and (max-width: 425px){
+    .grid-container--products {
+        grid-template-rows: [row1-start] auto [row1-end];
+    }
+    .grid-container--products.single-row a {
+        grid-row-start: row1-start;
+        grid-row-end: row1-end;
+    }
+
+    .grid-container--products.single-row {
+        overflow: auto;
+        scroll-snap-type: x mandatory; 
+        scroll-snap-type: mandatory; 
+        -ms-scroll-snap-type: mandatory; 
+        -webkit-scroll-snap-type: mandatory; 
+        -webkit-scroll-snap-destination: 0% 0%;
+        -webkit-overflow-scrolling: touch;
+    }
+    .grid-container--products.single-row::-webkit-scrollbar {
+        width:0;
+    }
+    .grid-container--products.single-row a {
+        scroll-snap-align: start;
+    }
+    
 }
 
 /* Set a style for all buttons */
