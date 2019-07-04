@@ -194,66 +194,11 @@ li a {
 .thumbnail--large {
     width: 90%;
 }
-
 .grid-container {
-    display: grid;
-    grid-template-columns: [col1-start] 30% [col1-end col2-start] 5% [col2-end col3-start] 30% [col3-end col4-start] 5% [col4-end col5-start] 30% [col5-end];
-    grid-template-rows: [row1-start] auto [row1-end row2-start] auto [row2-end row3-start] auto [row3-end row4-start] auto [row4-end row5-start] auto [row5-end row6-start] auto [row6-end];
-    grid-row-gap: 10px;
-    justify-items: center;
-    align-items: center;
-    justify-content: stretch;
-    padding-top: 50px;
+    display: block;
 }
-
-.grid-container--products {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 1rem;
-}
-
-.left-image-1 {
-    grid-column-start: col1-start;
-    grid-column-end: col1-end;
-    grid-row-start: row1-start;
-    grid-row-end: row2-end;
-}
-
-.right-image-1 {
-    grid-column-start: col5-start;
-    grid-column-end: col5-end;
-    grid-row-start: row3-start;
-    grid-row-end: row4-end;
-}
-
-.left-image-2 {
-    grid-column-start: col1-start;
-    grid-column-end: col1-end;
-    grid-row-start: row5-start;
-    grid-row-end: row6-end;
-}
-
-.farm-info-1 {
-    display: flex;
-    grid-column-start: col2-start;
-    grid-column-end: col3-end;
-    grid-row-start: row2-start;
-    grid-row-end: row2-end;
-}
-
-.farm-info-2 {
-    grid-column-start: col3-start;
-    grid-column-end: col4-end;
-    grid-row-start: row4-start;
-    grid-row-end: row4-end;
-}
-
-.farm-info-3 {
-    grid-column-start: col2-start;
-    grid-column-end: col3-end;
-    grid-row-start: row6-start;
-    grid-row-end: row6-end;
+.farm-info > * {
+    width: 100%;
 }
 
 .farm-info-headings {
@@ -263,42 +208,126 @@ li a {
     justify-self: start;
 }
 
-.farm-info-heading-1 {
-    grid-column-start: col2-start;
-    grid-column-end: col3-end;
-    grid-row-start: row1-start;
-    grid-row-end: row1-end;
-}
-
-.farm-info-heading-2 {
-    grid-column-start: col3-start;
-    grid-column-end: col4-end;
-    grid-row-start: row3-start;
-    grid-row-end: row3-end;
-}
-
-.farm-info-heading-3 {
-    grid-column-start: col2-start;
-    grid-column-end: col3-end;
-    grid-row-start: row5-start;
-    grid-row-end: row5-end;
-}
-
 .left-rotate {
-    -ms-transform: rotate(-15deg); /* IE 9 */
-    -webkit-transform: rotate(-15deg); /* Safari 3-8 */
-    transform: rotate(-15deg);
+    -ms-transform: none; /* IE 9 */
+    -webkit-transform: none; /* Safari 3-8 */
+    transform: none;
 }
 
 .right-rotate {
-    -ms-transform: rotate(15deg); /* IE 9 */
-    -webkit-transform: rotate(15deg); /* Safari 3-8 */
-    transform: rotate(15deg);
+    -ms-transform: none; /* IE 9 */
+    -webkit-transform: none; /* Safari 3-8 */
+    transform: none;
 }
 
 .title-info {
     align-items: baseline;
     padding: 20px;
+}
+
+@media screen and (min-width:500px){
+    .grid-container {
+        display: grid;
+        grid-template-columns: [col1-start] 30% [col1-end col2-start] 5% [col2-end col3-start] 30% [col3-end col4-start] 5% [col4-end col5-start] 30% [col5-end];
+        grid-template-rows: [row1-start] auto [row1-end row2-start] auto [row2-end row3-start] auto [row3-end row4-start] auto [row4-end row5-start] auto [row5-end row6-start] auto [row6-end];
+        grid-row-gap: 10px;
+        justify-items: center;
+        align-items: center;
+        justify-content: stretch;
+        padding-top: 50px;
+    }
+
+    .grid-container--products {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 1rem;
+    }
+
+    .left-image-1 {
+        grid-column-start: col1-start;
+        grid-column-end: col1-end;
+        grid-row-start: row1-start;
+        grid-row-end: row2-end;
+    }
+
+    .right-image-1 {
+        grid-column-start: col5-start;
+        grid-column-end: col5-end;
+        grid-row-start: row3-start;
+        grid-row-end: row4-end;
+    }
+
+    .left-image-2 {
+        grid-column-start: col1-start;
+        grid-column-end: col1-end;
+        grid-row-start: row5-start;
+        grid-row-end: row6-end;
+    }
+
+    .farm-info-1 {
+        display: flex;
+        grid-column-start: col2-start;
+        grid-column-end: col3-end;
+        grid-row-start: row2-start;
+        grid-row-end: row2-end;
+    }
+
+    .farm-info-2 {
+        grid-column-start: col3-start;
+        grid-column-end: col4-end;
+        grid-row-start: row4-start;
+        grid-row-end: row4-end;
+    }
+
+    .farm-info-3 {
+        grid-column-start: col2-start;
+        grid-column-end: col3-end;
+        grid-row-start: row6-start;
+        grid-row-end: row6-end;
+    }
+
+    .farm-info-heading-1 {
+        grid-column-start: col2-start;
+        grid-column-end: col3-end;
+        grid-row-start: row1-start;
+        grid-row-end: row1-end;
+    }
+
+    .farm-info-heading-2 {
+        grid-column-start: col3-start;
+        grid-column-end: col4-end;
+        grid-row-start: row3-start;
+        grid-row-end: row3-end;
+    }
+
+    .farm-info-heading-3 {
+        grid-column-start: col2-start;
+        grid-column-end: col3-end;
+        grid-row-start: row5-start;
+        grid-row-end: row5-end;
+    }
+
+    .left-rotate {
+        -ms-transform: rotate(-15deg); /* IE 9 */
+        -webkit-transform: rotate(-15deg); /* Safari 3-8 */
+        transform: rotate(-15deg);
+    }
+
+    .right-rotate {
+        -ms-transform: rotate(15deg); /* IE 9 */
+        -webkit-transform: rotate(15deg); /* Safari 3-8 */
+        transform: rotate(15deg);
+    }
+}
+
+@media screen and (min-width: 1050px){
+    .farm-info-1, .farm-info-3 {
+        grid-column-end: col5-end;
+    }
+    .farm-info-2 {
+        grid-column-start: col1-start;
+    }
 }
 
 /* Set a style for all buttons */
