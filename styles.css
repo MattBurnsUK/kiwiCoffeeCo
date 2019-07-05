@@ -120,8 +120,14 @@ li {
 }
 
 .thumbnail {
+    display: none;
     width: 100px;
     padding: 20px;
+}
+@media screen and (min-width: 425px){
+    .title-info > .thumbnail {
+        display: block;
+    }
 }
 
 @media screen and (min-width: 869px){
@@ -331,15 +337,19 @@ li a {
     grid-gap: 1rem;
 }
 
-@media screen and (max-width: 425px){
-    .grid-container--products {
+.single-row {
+    grid-gap: 5%;
+}
+
+@media screen and (max-width: 600px){
+    .grid-container--products.single-row {
         grid-template-rows: [row1-start] auto [row1-end];
+        grid-template-columns: repeat(7, 70%);
     }
     .grid-container--products.single-row a {
         grid-row-start: row1-start;
         grid-row-end: row1-end;
     }
-
     .grid-container--products.single-row {
         overflow: auto;
         scroll-snap-type: x mandatory; 
@@ -348,14 +358,16 @@ li a {
         -webkit-scroll-snap-type: mandatory; 
         -webkit-scroll-snap-destination: 0% 0%;
         -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
     }
     .grid-container--products.single-row::-webkit-scrollbar {
         width:0;
     }
     .grid-container--products.single-row a {
-        scroll-snap-align: start;
+        scroll-snap-align: center;
     }
-    
+    .product {
+    }
 }
 
 /* Set a style for all buttons */
@@ -668,6 +680,7 @@ nav a {
 }
 
 .product {
+    position: relative;
     padding: 10px;
     margin: 10px;
     border: 1px solid #3ab54b;
@@ -691,11 +704,11 @@ nav a {
     padding: 10px;
 }
 
-.product:hover > .hover-cover {
+.product:hover .hover-cover {
     display: block;
     color: white;
 }
-.product:hover > .thumbnail-container {
+.product:hover .thumbnail-container {
     opacity: 0;
 }
 
@@ -729,6 +742,21 @@ nav a {
     box-shadow: -2px 2px 6px #888888;
 }
 
+.cart-sticky {
+    position: sticky;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+    background: #3ab54b;
+    color: black;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+}
+@media screen and (min-width: 425px){
+    .cart-sticky{
+        display: none;
+    }
+}
 @media screen and (max-width: 425px) {
     .add-to-cart {
         box-shadow: none;
