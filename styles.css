@@ -153,7 +153,7 @@ li {
 
 .footer {
     display: grid;
-    height: 200px;
+    height: auto;
     background-color: #5B5959;
     color: white;
     grid-template-columns: [col1-start] 30% [col1-end col2-start] 30% [col2-end col3-start] 30% [col3-end];
@@ -238,16 +238,84 @@ li a {
     padding: 20px;
 }
 
+/* switching to paralax style images on small screens 
+    1) product details pages - farm info section
+*/
+
+@media screen and (max-width: 500px){
+    .left-image-1 {
+        background: url(sustainable-coffee-farming.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        height: 300px;
+    }
+    .right-image-1 {
+        background: url(coffee-tree-plant.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        height: 300px;
+    }
+    .left-image-2 {
+        background: url(harvesting-ripe-coffee-beans.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        height: 300px;
+    }
+    .left-image-1 img, .right-image-1 img, .left-image-2 img {
+        display: none;
+    }
+
+    /* 2) Home page */
+    
+    .roastery-image {
+        background: url(roastery.jpeg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        height: 300px;
+    }
+    .roastery-image img {
+        display: none;
+    }
+    .coffee-brewing-image {
+        background: url(coffee-brewing.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        height: 300px;
+    }
+    .coffee-brewing-image img {
+        display: none;
+        background: grey;
+    }
+}
+
+
 @media screen and (min-width:500px){
     .grid-container {
         display: grid;
         grid-template-columns: [col1-start] 30% [col1-end col2-start] 5% [col2-end col3-start] 30% [col3-end col4-start] 5% [col4-end col5-start] 30% [col5-end];
         grid-template-rows: [row1-start] auto [row1-end row2-start] auto [row2-end row3-start] auto [row3-end row4-start] auto [row4-end row5-start] auto [row5-end row6-start] auto [row6-end];
         grid-row-gap: 10px;
+        grid-column-gap: 2%;
         justify-items: center;
         align-items: center;
         justify-content: stretch;
-        padding-top: 50px;
+        padding: 50px;
+        box-sizing: border-box;
     }
 
     .left-image-1 {
@@ -491,7 +559,6 @@ nav a {
     flex-wrap: wrap;
     justify-content: space-evenly;
     box-sizing: border-box;
-    padding: 0px 20px 0px 20px;
 }
 
 .full-width--always {
@@ -662,7 +729,6 @@ nav a {
     margin: 8px 0;
     border: 3px solid rgb(255, 136, 0);
     cursor: pointer;
-    width: 100%;
     opacity: 1;
     text-align: center;
 }
@@ -727,7 +793,12 @@ nav a {
 }
 
 .heavy-padding {
-    padding: 20%;
+    padding: 10% 20% 10% 20%;
+}
+
+.left-right-padding {
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .bg-grey {
