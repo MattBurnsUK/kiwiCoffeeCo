@@ -35,19 +35,36 @@
       </section>
     </nav>
     <section class="checkout-progress-bar">
-        <section class="checkout-tabs active"><a href="">Basket</a></section>
-        <section class="checkout-tabs"><a href="">Shipping</a></section>
+        <section class="checkout-tabs"><a href="">Basket</a></section>
+        <section class="checkout-tabs active"><a href="">Shipping</a></section>
         <section class="checkout-tabs"><a href="">Payment</a></section>
         <section class="checkout-tabs"><a href="">Thankyou</a></section>
     </section>
-    <section class="checkout-next"><a href="checkout.html">Next</a></section>
-    <section class="basket-view" id="basket">
-        
+    <section class="checkout-next"><a href="checkout-payment.html">Next</a></section>
+    <section class="address-view">
+        <form>
+            <fieldset>
+            <legend>Contact Details:</legend>
+            <label for="first-name">First Name:</label>
+            <input type="text" name="first-name"><br>
+            <label for="last-name">Last Name:</label>
+            <input type="text" name="last-name"><br>
+            <label for="email">E-mail:</label>
+            <input type="email" name="email"><br>
+            <label for="confirm-email">Confirm e-mail:</label>
+            <input type="email" name="confirm-email"><br>
+            </fieldset>
+            <fieldset>
+            <legend>Shipping Address:</legend>
+            <label for="address-line-1">Address:</label>
+            <input type="text" name="address-line-1"><br>
+            <input type="text" name="address-line-2"><br>
+            <input type="text" name="address-line-3"><br>
+            <label for="postcode">Postcode/ZIP:</label>
+            <input type="text" name="postcode"><br>
+            </fieldset>
+        </form>
     </section>
-    <script src="viewbasket.js"></script>
-    <section class="total-price" id="total-price">
-      <script src="calculate.js"></script>
-    </section>
-    <section class="checkout-next"><a href="checkout.html">Next</a></section>
-    </body>
-    </html>
+    <section class="checkout-next"><a href="checkout-payment.html">Next</a></section>
+</body>
+</html>

@@ -2,27 +2,44 @@ var basketItems = JSON.parse(localStorage.getItem("storedBasketItems")) || [];
 var gridContainer = document.getElementById("basket");
 
 // display all items in the basket
+var cartItemID = 0;
 for (let l = 0; l < basketItems.length; l++){
-    //set the image
+    // create a new section for each item
+    var item = document.createElement('section');
+    item.setAttribute('class','basket-item');
+    gridContainer.appendChild(item);
+
+    // add cart item IDs
+    cartItemID ++
+    var prodID = document.createElement('section');
+    prodID.setAttribute('class','item-id');
+    prodID.textContent = cartItemID;
+    item.appendChild(prodID);
+
+    //set the image;
     var image = document.createElement("img");
     image.setAttribute('src','mexican-coffee.png')
-    gridContainer.appendChild(image);
+    item.appendChild(image);
+
     // set the title
     var title = document.createElement('section');
     title.setAttribute('class','title');
     title.textContent = basketItems[l][0];
-    gridContainer.appendChild(title);
+    item.appendChild(title);
+
     // set the bag size
     var size = document.createElement('section');
     size.setAttribute('class', 'bag-size');
     size.textContent = basketItems[l][1];
-    gridContainer.appendChild(size);
+    item.appendChild(size);
     var priceFor = size.textContent;
+
     // set the grind size
     var grindSize = document.createElement('section');
     grindSize.setAttribute('class','grind-size');
     grindSize.textContent = basketItems[l][2];
-    gridContainer.appendChild(grindSize);
+    item.appendChild(grindSize);
+
     // set the price
     var price = document.createElement('price');
     price.setAttribute('class','price');
@@ -32,32 +49,40 @@ for (let l = 0; l < basketItems.length; l++){
     } else {
         price.textContent = 14.99;
     }
-    gridContainer.appendChild(price);
-    // remove from cart button
+    item.appendChild(price);
+
+    // add in remove from cart buttons
     var removeFromCart = document.createElement("button");
+    removeFromCart.textContent = "remove item";
     removeFromCart.setAttribute('class','remove-from-cart');
-    gridContainer.appendChild(removeFromCart);
+    item.appendChild(removeFromCart);
+
+    // add event listeners to all remove buttons
+    updateEventListeners();
 }
 
 // remove from cart button
-
-
-
-
-/*
-function binClick(e){
-    let listItem = e.target.parentElement.parentElement;
-    theList.removeChild(listItem);
-    // update the array to remove the clicked item
-    let arrVal = listItem.textContent;
-    //console.log(arrVal);
-    for (let i = 0; i < retrievedListItems.length; i++){
-        if (retrievedListItems[i][0] === arrVal) {
-            retrievedListItems.splice(i, 1);
-        }
-    }
-
+function removeClick(e){
+    let cartItem = e.target.parentElement;
+    let deleteItemID = e.target.parentElement.firstChild.textContent;
+    let deleteArrIndex = deleteItemID - 1;
+    console.log(cartItem);
+    console.log(deleteItemID);
+    console.log(deleteArrIndex);
+    //remove the clicked item from the page
+    gridContainer.removeChild(cartItem);
+    // update the array with the new basket - delete item from the array
+    basketItems.splice(deleteArrIndex, 1);
     // update local storage with the new array
-    localStorage.setItem("storedListItems", JSON.stringify(retrievedListItems));
+    localStorage.setItem("storedBasketItems", JSON.stringify(basketItems));
 }
-*/
+
+
+// Apply the event listeners to all itmes
+
+function updateEventListeners () {
+    var removeButtons = document.getElementsByClassName('remove-from-cart');
+    for (let i=0; i<removeButtons.length; i++){
+        removeButtons[i].addEventListener("click", removeClick);
+    }
+}

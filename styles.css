@@ -452,6 +452,210 @@ li a {
     }
 }
 
+/* basket viewer */
+
+.basket-item {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: [col1-start] 33% [col1-end col2-start] 33% [col2-end col3-start] 33% [col3-end];
+    grid-template-rows: [row1-start] auto [row1-end row2-start] auto [row2-end row3-start] auto [row3-end];
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+}
+
+.basket-item .item-id {
+    display: none;
+}
+
+.basket-item img {
+    width: 100%;
+    grid-column-start: col1-start;
+    grid-column-end: col1-end;
+    grid-row-start: row1-start;
+    grid-row-end: row3-end;
+}
+
+.basket-item .title {
+    grid-column-start: col2-start;
+    grid-column-end: col3-end;
+    grid-row-start: row1-start;
+    grid-row-end: row1-end;
+    font-weight: 900;
+}
+
+.basket-item .bag-size {
+    grid-column-start: col2-start;
+    grid-column-end: col2-end;
+    grid-row-start: row2-start;
+    grid-row-end: row2-end;
+}
+
+.basket-item .grind-size {
+    grid-column-start: col3-start;
+    grid-column-end: col3-end;
+    grid-row-start: row2-start;
+    grid-row-end: row2-end;
+    max-width: 65px;
+    min-width: 0;
+}
+
+.basket-item .price {
+    grid-column-start: col3-start;
+    grid-column-end: col3-end;
+    grid-row-start: row3-start;
+    grid-row-end: row3-end;
+    padding: 10%;
+}
+
+.basket-item .bag-size::before {
+    content: "Bag Size: ";
+    font-weight: 600;
+}
+
+.basket-item .grind-size::before {
+    content: "Grind For: ";
+    font-weight: 600;
+}
+
+.basket-item .price::before {
+    content: "$";
+}
+
+.remove-from-cart {
+    background-color: black;
+    opacity: 0.3;
+    padding: 5px;
+    width: auto;
+}
+
+.total-price {
+    width: 95%;
+    font-size: 2em;
+    text-align: right;
+    padding: 10px;
+}
+
+.total-price::before {
+    content: "Total: $"
+}
+
+.checkout-next {
+    width: 100%;
+    background: #3ab54b;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.checkout-next a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.checkout-progress-bar {
+    display: grid;
+    grid-template-columns: [col1-start] auto [col1-end col2-start] auto [col2-end col3-start] auto [col3-end col4-start] auto [col4-end];
+    grid-template-rows: [row1-start] auto [row1-end];
+    margin-top: 10px;
+}
+
+.checkout-tabs {
+    padding: 5px;
+    color: gray;
+    background-color: white;
+    border: 1px solid gray;
+}
+
+.active, .active a {
+    color: white;
+    background-color: gray;
+}
+
+.checkout-tabs a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    background-color: inherit;
+}
+
+/* checkout pages */
+
+.address-view label {
+    color: black;
+    font-weight: 400;
+    padding: 10px;
+}
+
+.address-view input, .payment-details-form input {
+    display: inline-block;
+    padding: 10px;
+    margin-left: 20px;
+    width: 85%;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: lightgray;
+}
+
+.payment-details-form input {
+    width: 80%;
+    text-align: center;
+}
+
+fieldset {
+    margin: 15px;
+    border: none;
+    -webkit-box-shadow: 0 8px 15px -6px black;
+	   -moz-box-shadow: 0 8px 15px -6px black;
+	        box-shadow: 0 8px 15px -6px black;
+}
+
+.basket-view {
+    margin: 15px;
+    border: 1px solid lightgray;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+}
+
+legend {
+    color: black;
+    font-weight: 600;
+    text-align: center;
+    font-size: x-large;
+    text-decoration: underline;
+}
+
+.checkout-page {
+    font-family: sans-serif;
+    font-size: small;
+}
+
+.payment-details-form form {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    text-align: center;
+}
+
+.payment-details-form label {
+    grid-column: 1 / 2;
+}
+
+.payment-details-form input {
+    grid-column: 2 / 3;
+}
+
+.payment-details-form > .logos {
+    width: 50%;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 /* Set a style for all buttons */
 button {
     background-color: #4CAF50;
@@ -706,6 +910,12 @@ nav a {
 .bg-white {
     background-color: white;
     color: black;
+}
+
+.bg-beige {
+    background-color: rgb(240, 239, 234);
+    padding: 10px;
+    text-align: center;
 }
 
 .rounded {
