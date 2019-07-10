@@ -600,6 +600,7 @@ li a {
     outline: 0;
     border-width: 0 0 2px;
     border-color: lightgray;
+    text-align: center;
 }
 
 .payment-details-form input {
@@ -610,12 +611,10 @@ li a {
 fieldset {
     margin: 15px;
     border: none;
-    -webkit-box-shadow: 0 8px 15px -6px black;
-	   -moz-box-shadow: 0 8px 15px -6px black;
-	        box-shadow: 0 8px 15px -6px black;
 }
 
 .basket-view {
+    min-width: 70%;
     margin: 15px;
     border: 1px solid lightgray;
     -webkit-box-shadow: 0 8px 6px -6px black;
@@ -630,6 +629,11 @@ fieldset {
 .sidebar {
     display: none;
     width: 1fr;
+}
+
+#checkout-view {
+    box-shadow: none;
+    border: none;
 }
 
 @media screen and (min-width: 600px){
@@ -982,6 +986,10 @@ nav a {
 .bg-beige {
     background-color: rgb(240, 239, 234);
     padding: 10px;
+    text-align: center;
+}
+
+.full-width-center {
     text-align: center;
 }
 
