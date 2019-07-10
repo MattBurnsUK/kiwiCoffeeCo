@@ -28,7 +28,7 @@
   </section>
   <nav>
     <section class="text-nav">
-      <label class="no-padding"><a class="hamburger" href="#">Menu <i class="fas fa-bars"></i></a><input id="menu-checkbox" type="checkbox" checked>
+      <label class="no-padding"><a class="hamburger" href="#">Menu <i class="fas fa-bars"></i></a><input id="menu-checkbox" type="checkbox">
           <a href="#">Home</a>
           <a href="#">About</a>
           <a href="#">Coffee</a>
@@ -214,9 +214,35 @@
       logos here
     </p>
   </section>
-  <section class="cart-sticky">
-    Add to cart
-  </section>
+  <section class="cart-sticky" id="cart-sticky">
+    <section class="cart-sticky-popup" id="cart-sticky-popup">
+      Add to cart
+    </section>
+    <form class="add-to-cart" id="addToCartForm">
+        <section class="price">
+          <input checked="checked" id="g200g" type="radio" name="size" value="200g">
+          <label for="g200g">200g</label>
+          <input id="g500g" type="radio" name="size" value="500g">
+          <label for="g500g">500g</label>
+          <p>Please choose your grind type:</p>
+          <div class="grind-icons">
+            <input checked="checked" id="aeropress" type="radio" name="grind-size" value="aeropress" />
+            <label class="icon-selector aeropress" for="aeropress"></label>
+            <input id="moka" type="radio" name="grind-size" value="moka" />
+            <label class="icon-selector moka"for="moka"></label>
+            <input id="chemex" type="radio" name="grind-size" value="chemex" />
+            <label class="icon-selector chemex"for="chemex"></label>
+            <input id="drip" type="radio" name="grind-size" value="drip" />
+            <label class="icon-selector drip"for="drip"></label>
+            <input id="espresso" type="radio" name="grind-size" value="espresso" />
+            <label class="icon-selector espresso"for="espresso"></label>
+          </div>
+          <button class="cart-button" id="cart-button-popup" type="button">Add To Cart</button>
+          <img class="half-width-image" src="secure-payment.png">
+        </section>
+      </form>
+    </section>
+  <script src="cart-sticky.js"></script>
   <script src="main.js"></script>
 </body>
 </html>

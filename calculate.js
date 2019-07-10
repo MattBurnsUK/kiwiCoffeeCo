@@ -1,7 +1,7 @@
 var prices = document.getElementsByClassName('price');
 console.log(prices);
 
-var priceArray = [];
+var priceArray = [0];
 
 for (let h=0; h < prices.length; h++) {
     var theString = prices[h].textContent;
@@ -14,8 +14,11 @@ function addUp(total, num) {
     return total + num;
 }
 
-var subtotal = priceArray.reduce(addUp);
+function updateTotalPrice(){
+    var subtotal = priceArray.reduce(addUp);
+    console.log("updated subtotal is");
+    console.log(subtotal);
+    document.getElementById('total-price').innerHTML = subtotal;
+}
 
-console.log(subtotal);
 
-document.getElementById('total-price').innerHTML = subtotal;
