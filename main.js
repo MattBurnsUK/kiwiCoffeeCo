@@ -29,3 +29,31 @@ function updateCart(e){
 
 basketButton.addEventListener("click", updateCart);
 basketButtonPopup.addEventListener("click", updateCart);
+
+// change the text on the 'add to cart' button once clicked
+var addToCartButton = document.getElementById('cart-button-popup');
+addToCartButton.addEventListener('click', function() {
+    if (addToCartButton.getAttribute("text-to-swap") == addToCartButton.innerHTML) {
+        addToCartButton.innerHTML = addToCartButton.getAttribute('original-text');
+    } else {
+        addToCartButton.setAttribute("original-text", addToCartButton.innerHTML);
+        addToCartButton.innerHTML = addToCartButton.getAttribute("text-to-swap");
+        addToCartButton.removeEventListener("click", updateCart);
+        addToCartButton.addEventListener("click", function (){
+            document.location.href = "http://localhost/KiwiCoffeeCo2/basket";
+        })
+    }
+}, false);
+
+/*
+var button = document.querySelectorAll("button")[0];
+button.addEventListener('click', function() {
+  if (button.getAttribute("data-text-swap") == button.innerHTML) {
+    button.innerHTML = button.getAttribute("data-text-original");
+  } else {
+    button.setAttribute("data-text-original", button.innerHTML);
+    button.innerHTML = button.getAttribute("data-text-swap");
+  }
+}, false);
+
+*/
