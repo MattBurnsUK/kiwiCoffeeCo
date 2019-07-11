@@ -175,7 +175,7 @@ li {
     height: auto;
     background-color: #5B5959;
     color: white;
-    grid-template-columns: [col1-start] calc(50%-10px) [col1-end col2-start] calc(50%-10px) [col2-end];
+    grid-template-columns: [col1-start] 50% [col1-end col2-start] 45% [col2-end];
     grid-template-rows: [row1-start] auto [row1-end];
     grid-column-gap: 10px;
     grid-row-gap: 10px;
@@ -207,11 +207,14 @@ li a {
     grid-row-end: [row1-end];
 }
 
+.footer-2 img {
+    max-width: 100%;
+    max-height: 100px;
+}
+
 .footer-header {
-    border-bottom: 2px solid green;
     display: block;
     margin-bottom: 10px;
-    text-transform: uppercase;
 }
 
 /* farm info grid on product details page */
@@ -1028,7 +1031,7 @@ nav a {
     font-family: 'B612 Mono', monospace;
     color: #ED7D3A;
    /* color: rgb(255, 136, 0); */
-    padding: 14px 20px;
+    padding: 10px 20px;
     margin: 8px 0;
     border: 3px solid rgb(255, 136, 0);
     cursor: pointer;
@@ -1285,6 +1288,12 @@ input:checked + label {
 /* add to cart form*/
 
 .cart-button {
+    width:98%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.cart-button-no-price {
     width:98%;
     margin-left: 1%;
     margin-right: 1%;

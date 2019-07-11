@@ -40,6 +40,7 @@ function updateCartText(e) {
     if (e.target.getAttribute("text-to-swap") == e.target.innerHTML) {
         e.target.innerHTML = e.target.getAttribute('original-text');
     } else {
+        e.target.setAttribute("class", ".cart-button-no-price");
         e.target.setAttribute("original-text", e.target.innerHTML);
         e.target.innerHTML = e.target.getAttribute("text-to-swap");
         e.target.removeEventListener("click", updateCart);
