@@ -30,17 +30,21 @@ function updateCart(e){
 basketButton.addEventListener("click", updateCart);
 basketButtonPopup.addEventListener("click", updateCart);
 
-// change the text on the 'add to cart' button once clicked
+// change the text on the 'add to cart' button once clicked - 2 buttons. 1 in popup(mob), 1 in page body(non-mob)
 var addToCartButton = document.getElementById('cart-button-popup');
-addToCartButton.addEventListener('click', function() {
-    if (addToCartButton.getAttribute("text-to-swap") == addToCartButton.innerHTML) {
-        addToCartButton.innerHTML = addToCartButton.getAttribute('original-text');
+var addToCartButtonMain = document.getElementById('cart-button');
+addToCartButton.addEventListener('click', updateCartText);
+addToCartButtonMain.addEventListener('click', updateCartText);
+
+function updateCartText(e) {
+    if (e.target.getAttribute("text-to-swap") == e.target.innerHTML) {
+        e.target.innerHTML = e.target.getAttribute('original-text');
     } else {
-        addToCartButton.setAttribute("original-text", addToCartButton.innerHTML);
-        addToCartButton.innerHTML = addToCartButton.getAttribute("text-to-swap");
-        addToCartButton.removeEventListener("click", updateCart);
-        addToCartButton.addEventListener("click", function (){
+        e.target.setAttribute("original-text", e.target.innerHTML);
+        e.target.innerHTML = e.target.getAttribute("text-to-swap");
+        e.target.removeEventListener("click", updateCart);
+        e.target.addEventListener("click", function (){
             document.location.href = "http://localhost/KiwiCoffeeCo2/basket";
         })
     }
-}, false);
+}

@@ -430,12 +430,12 @@ li a {
 /* Category pages and products viewer */
 .grid-container--products {
     position: relative;
-    overflow: hidden;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-template-rows: auto;
-    grid-gap: 1%;
     padding-bottom: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 @media screen and (max-width: 600px){
@@ -816,6 +816,11 @@ nav a {
     padding: 10px;
     margin-bottom: 10px;
     display: none;
+}
+
+.text-nav {
+    max-width: 90%;
+    box-sizing: border-box;
 }
 
 @media screen and (max-width: 420px ) {

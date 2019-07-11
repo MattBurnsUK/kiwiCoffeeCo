@@ -23,7 +23,7 @@
     </section>
     <section class="buttons-container">
       <button type="button" class="account-button">My Account</button>
-      <button type="button" class="basket"><i class="fas fa-shopping-basket"></i>Basket</button>
+      <button type="button" class="basket"><i class="fas fa-shopping-basket"></i> Basket<div id="cart-count">(0)</div></button>
     </section>
   </section>
   <nav>
@@ -77,7 +77,7 @@
               <input id="espresso" type="radio" name="grind-size" value="espresso" />
               <label class="icon-selector espresso"for="espresso"></label>
             </div>
-            <button class="cart-button" id="cart-button" type="button">Add To Cart</button>
+            <button class="cart-button" id="cart-button" type="button" original-text='Add To Cart' text-to-swap="Go To Checkout">Add To Cart</button>
             <img class="half-width-image" src="secure-payment.png">
           </section>
         </form>
@@ -239,5 +239,6 @@
     </section>
   <script src="cart-sticky.js"></script>
   <script src="main.js"></script>
+  <script src="cart-count.js"></script>
 </body>
 </html>
