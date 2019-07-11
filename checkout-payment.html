@@ -27,7 +27,7 @@
         </section>
         <nav>
             <section class="text-nav">
-            <label class="no-padding"><a class="hamburger" href="#">Menu <i class="fas fa-bars"></i></a><input id="menu-checkbox" type="checkbox" checked>
+            <label class="no-padding"><a class="hamburger" href="#">Menu <i class="fas fa-bars"></i></a><input id="menu-checkbox" type="checkbox">
                 <a href="#">Home</a>
                 <a href="#">About</a>
                 <a href="#">Coffee</a>
@@ -47,17 +47,18 @@
             <section class="payment-details-form basket-view">
                 <img src="payment-logos.png" class="logos">
                 <form>
-                    <label for="card-number">Card number:</label>
-                    <input type="number" name="card-number" placeholder="4462-5428-9876-7444"><br>
-                    <label for="card-name">Name on card:</label>
-                    <input type="text" name="card-name" placeholder="Mr John Smith"><br>
-                    <label for="cvv">CVV:</label>
-                    <input type="number" name="cvv" placeholder="123"><br>
-                    <label for="expiry">Expiry date:</label>
-                    <input type="month" placeholder="08/22"><br>
+                    <label for="card-number">Card number:<div class="error-message"> *</div></label>
+                    <input type="number" name="card-number" placeholder="4462-5428-9876-7444" id="card-number"><br>
+                    <label for="card-name">Name on card:<div class="error-message"> *</div></label>
+                    <input type="text" name="card-name" placeholder="Mr John Smith" id="card-name"><br>
+                    <label for="cvv">CVV:<div class="error-message"> *</div></label>
+                    <input type="number" name="cvv" placeholder="123" id="card-cvv"><br>
+                    <label for="expiry">Expiry date:<div class="error-message"> *</div></label>
+                    <input type="month" placeholder="08/22" id="card-exp"><br>
                 </form>
             </section>
         </section>
         <section class="checkout-next"><a href="checkout-thankyou.html">Confirm Order</a></section>
+    <script src="form-valid.js"></script>
     </body>
     </html>

@@ -734,6 +734,12 @@ legend {
     text-align: center;
 }
 
+@media screen and (max-width: 484px){
+    .payment-details-form form{
+        display: block;
+    }
+}
+
 .payment-details-form label {
     grid-column: 1 / 2;
 }

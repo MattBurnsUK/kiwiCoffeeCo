@@ -26,7 +26,7 @@
     </section>
     <nav>
       <section class="text-nav">
-        <label class="no-padding"><a class="hamburger" href="#">Menu <i class="fas fa-bars"></i></a><input id="menu-checkbox" type="checkbox" checked>
+        <label class="no-padding"><a class="hamburger" href="#">Menu <i class="fas fa-bars"></i></a><input id="menu-checkbox" type="checkbox">
             <a href="#">Home</a>
             <a href="#">About</a>
             <a href="#">Coffee</a>
@@ -58,12 +58,12 @@
               </fieldset>
               <fieldset>
               <legend>Shipping Address:</legend>
-              <label for="address-line-1">Address:</label>
-              <input type="text" name="address-line-1" placeholder="1 Smith Street"><br>
+              <label for="address-line-1">Address:<div class="error-message"> *</div></label>
+              <input type="text" name="address-line-1" placeholder="1 Smith Street" id="address1"><br>
               <input type="text" name="address-line-2" placeholder="SmithTown"><br>
               <input type="text" name="address-line-3" placeholder="Smithshire"><br>
-              <label for="postcode">Postcode/ZIP:</label>
-              <input type="text" name="postcode" placeholder="SM1 TH" maxlength="8"><br>
+              <label for="postcode">Postcode/ZIP:<div class="error-message"> *</div></label>
+              <input type="text" name="postcode" placeholder="SM1 TH" maxlength="8" id="postcode"><br>
               </fieldset>
           </form>
       </section>
