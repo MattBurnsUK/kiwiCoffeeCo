@@ -1238,9 +1238,11 @@ nav a {
 
 
 /* tabs for product details page */
+
 input {
     display: none;
 }
+
 
 .tabbed {
     display: none;
@@ -1285,7 +1287,7 @@ input:checked + label {
     content: " - $14.99";
 }
 
-/* add to cart form*/
+/* add to cart forms - static and sticky popup one on mob*/
 
 .cart-button {
     width:98%;
@@ -1318,12 +1320,16 @@ input:checked + label {
     justify-content: space-around;
 }
 
-.grind-icons input {
+.cart-container .grind-icons input {
     margin:0px;
     padding:0;
     -webkit-appearance:none;
        -moz-appearance:none;
             appearance:none;
+}
+
+.grind-icons input:checked + div, .price input:checked + div {
+    background-color: #3ab54b;
 }
 
 .grind-icons input:active + .icon-selector {
@@ -1333,6 +1339,91 @@ input:checked + label {
        -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
             filter: brightness(1.2) grayscale(.5) opacity(.9);
 }
+
+/* grind icons */
+
+.aeropress {
+    background-image: url(http://localhost/kiwicoffeeco2/aeropress-icon.png);
+}
+
+.moka {
+    background-image: url(http://localhost/kiwicoffeeco2/moka-icon.png);
+}
+
+.chemex {
+    background-image: url(http://localhost/kiwicoffeeco2/chemex-icon.png);
+}
+
+.drip {
+    background-image: url(http://localhost/kiwicoffeeco2/drip-icon.png);
+    background-size: 100%;
+}
+
+.espresso {
+    background-image: url(http://localhost/kiwicoffeeco2/espresso-icon.png);
+}
+
+.aeropress:hover, .moka:hover, .chemex:hover, .drip:hover, .espresso:hover, .grind-icons > input:checked + label {
+    background-image: none;
+    background-color: #3ab54b;
+    color: white;
+    height: 125px;
+    line-height: 125px;
+    text-align: center;
+}
+
+.aeropress:hover::after, #aeropress:checked + label::after {
+    content: "Aeropress";
+}
+
+.moka:hover::after, #moka:checked + label::after {
+    content: "Moka";
+}
+
+.chemex:hover::after, #chemex:checked + label::after {
+    content: "Chemex";
+}
+
+.drip:hover::after, #drip:checked + label::after {
+    content: "Drip";
+}
+
+.espresso:hover::after, #espresso:checked + label::after {
+    content: "Espresso";
+}
+
+.grind-icons-sticky-container > input:checked + label {
+    background-color: #3ab54b !important;
+}
+
+.cart-sticky {
+
+}
+
+.icon-selector{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:125px;
+    height:125px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    padding: 0px;
+
+}
+
+.cart-sticky--clicked .icon-selector {
+    max-width: 10px;
+    max-height: 10px;
+}
+
+.cart-sticky--clicked #moka:checked+label {
+    background-color: #3ab54b;
+}
+
+/* reviews */
 
 .reviews {
     display: flex;
@@ -1373,53 +1464,3 @@ input:checked + label {
         font-size: 6em;
         z-index: 1;
      }
-
-.aeropress {
-    background-image: url(http://localhost/kiwicoffeeco2/aeropress-icon.png);
-}
-.aeropress:hover {
-    background-image: none;
-    background-color: #3ab54b;
-    content: "Aeropress";
-}
-
-.moka {
-    background-image: url(http://localhost/kiwicoffeeco2/moka-icon.png);
-}
-.moka:hover {
-    background-image: none;
-    background-color: #3ab54b;
-    content: "Moka";
-}
-
-.chemex {
-    background-image: url(http://localhost/kiwicoffeeco2/chemex-icon.png);
-}
-
-.drip {
-    background-image: url(http://localhost/kiwicoffeeco2/drip-icon.png);
-    background-size: 100%;
-}
-
-.espresso {
-    background-image: url(http://localhost/kiwicoffeeco2/espresso-icon.png);
-}
-
-.icon-selector{
-    cursor:pointer;
-    background-size:contain;
-    background-repeat:no-repeat;
-    display:inline-block;
-    width:75px;
-    height:75px;
-    -webkit-transition: all 100ms ease-in;
-       -moz-transition: all 100ms ease-in;
-            transition: all 100ms ease-in;
-    padding: 0px;
-
-}
-.icon-selector:hover{
-    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
-       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
-            filter: brightness(1.2) grayscale(.5) opacity(.9);
-}
