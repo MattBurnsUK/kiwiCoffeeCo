@@ -45,7 +45,7 @@ function updateCartText(e) {
         e.target.innerHTML = e.target.getAttribute("text-to-swap");
         e.target.removeEventListener("click", updateCart);
         e.target.addEventListener("click", function (){
-            document.location.href = "http://localhost/KiwiCoffeeCo2/basket";
+            document.location.href = "/basket.html";
         })
     }
 }
